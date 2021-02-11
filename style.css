@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.navBar {
+  width: 100%;
+  max-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  -webkit-box-shadow: 4px 5px 10px #a8a7a7;
+          box-shadow: 4px 5px 10px #a8a7a7;
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: fixed;
+}
+
+.navBar .navTitle {
+  color: white;
+  padding: 1rem;
+}
+
+.navBar .navItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.navBar .navItems .navLink {
+  color: #c9c0c0;
+  text-decoration: none;
+  padding: 1rem;
+  margin-left: 2rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  font-size: 18px;
+}
+
+.navBar .navItems .navLink:hover {
+  color: white;
+}
+
+.navBar .burger {
+  display: hidden;
+  height: 0;
+  width: 0;
+}
+
+@media (max-width: 800px) {
+  .navBar {
+    width: 100%;
+  }
+  .navBar .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    height: 40px;
+    width: 40px;
+    z-index: 9999;
+  }
+  .navBar .burger .burger-lines {
+    height: 3px;
+    background-color: white;
+    margin-top: 10px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .navBar .navItems {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(46, 46, 46, 0.6);
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .navBar .navItems .navLink {
+    font-size: 26px;
+    text-align: center;
+    margin: 2rem 0 0 0;
+    opacity: 1;
+    color: white;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .navBar .navItemsActive {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    left: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
